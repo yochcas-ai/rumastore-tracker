@@ -1,1 +1,297 @@
-{}
+{
+  "generated_at": "2026-02-25T22:27:47.433Z",
+  "tc": 3.35,
+  "sources_active": {
+    "ebay": true,
+    "koban": true,
+    "mercadolibre": true
+  },
+  "prices": {
+    "194735337279": {
+      "market_price_soles": 59,
+      "market_price_usd": 17.61,
+      "low_soles": 10.9,
+      "high_soles": 69,
+      "retail_soles": 26.77,
+      "premium_pct": 120,
+      "trend": "flat",
+      "confidence": "low",
+      "sources": {
+        "ebay": null,
+        "koban": {
+          "median_soles": 59,
+          "samples": 5
+        },
+        "mercadolibre": null
+      },
+      "updated_at": "2026-02-25T22:27:44.649Z"
+    },
+    "194735337354": {
+      "market_price_soles": 55,
+      "market_price_usd": 16.42,
+      "low_soles": 55,
+      "high_soles": 55,
+      "retail_soles": 26.77,
+      "premium_pct": 105,
+      "trend": "flat",
+      "confidence": "low",
+      "sources": {
+        "ebay": null,
+        "koban": {
+          "median_soles": 55,
+          "samples": 1
+        },
+        "mercadolibre": null
+      },
+      "updated_at": "2026-02-25T22:27:45.015Z"
+    },
+    "194735337118": {
+      "market_price_soles": 49,
+      "market_price_usd": 14.63,
+      "low_soles": 49,
+      "high_soles": 49,
+      "retail_soles": 23.42,
+      "premium_pct": 109,
+      "trend": "flat",
+      "confidence": "low",
+      "sources": {
+        "ebay": null,
+        "koban": {
+          "median_soles": 49,
+          "samples": 1
+        },
+        "mercadolibre": null
+      },
+      "updated_at": "2026-02-25T22:27:45.317Z"
+    },
+    "194735337132": {
+      "market_price_soles": 18.9,
+      "market_price_usd": 5.64,
+      "low_soles": 15.9,
+      "high_soles": 46.9,
+      "retail_soles": 23.42,
+      "premium_pct": -19,
+      "trend": "flat",
+      "confidence": "low",
+      "sources": {
+        "ebay": null,
+        "koban": {
+          "median_soles": 18.9,
+          "samples": 5
+        },
+        "mercadolibre": null
+      },
+      "updated_at": "2026-02-25T22:27:45.620Z"
+    },
+    "194735337170": {
+      "market_price_soles": 55,
+      "market_price_usd": 16.42,
+      "low_soles": 49,
+      "high_soles": 55,
+      "retail_soles": 20.07,
+      "premium_pct": 174,
+      "trend": "flat",
+      "confidence": "low",
+      "sources": {
+        "ebay": null,
+        "koban": {
+          "median_soles": 55,
+          "samples": 2
+        },
+        "mercadolibre": null
+      },
+      "updated_at": "2026-02-25T22:27:45.922Z"
+    },
+    "194735262946": {
+      "market_price_soles": 44.9,
+      "market_price_usd": 13.4,
+      "low_soles": 44.9,
+      "high_soles": 44.9,
+      "retail_soles": 26.77,
+      "premium_pct": 68,
+      "trend": "flat",
+      "confidence": "low",
+      "sources": {
+        "ebay": null,
+        "koban": {
+          "median_soles": 44.9,
+          "samples": 1
+        },
+        "mercadolibre": null
+      },
+      "updated_at": "2026-02-25T22:27:46.225Z"
+    },
+    "194735337316": {
+      "market_price_soles": 95,
+      "market_price_usd": 28.36,
+      "low_soles": 95,
+      "high_soles": 95,
+      "retail_soles": 26.77,
+      "premium_pct": 255,
+      "trend": "flat",
+      "confidence": "low",
+      "sources": {
+        "ebay": null,
+        "koban": {
+          "median_soles": 95,
+          "samples": 1
+        },
+        "mercadolibre": null
+      },
+      "updated_at": "2026-02-25T22:27:46.526Z"
+    },
+    "194735337194": {
+      "market_price_soles": null,
+      "market_price_usd": null,
+      "low_soles": null,
+      "high_soles": null,
+      "retail_soles": 26.77,
+      "premium_pct": null,
+      "trend": "flat",
+      "confidence": "none",
+      "sources": {
+        "ebay": null,
+        "koban": null,
+        "mercadolibre": null
+      },
+      "updated_at": "2026-02-25T22:27:46.828Z"
+    },
+    "194735337255": {
+      "market_price_soles": 39.9,
+      "market_price_usd": 11.91,
+      "low_soles": 38.9,
+      "high_soles": 39.9,
+      "retail_soles": 23.42,
+      "premium_pct": 70,
+      "trend": "flat",
+      "confidence": "low",
+      "sources": {
+        "ebay": null,
+        "koban": {
+          "median_soles": 39.9,
+          "samples": 2
+        },
+        "mercadolibre": null
+      },
+      "updated_at": "2026-02-25T22:27:47.130Z"
+    },
+    "194735337187": {
+      "market_price_soles": null,
+      "market_price_usd": null,
+      "low_soles": null,
+      "high_soles": null,
+      "retail_soles": 23.42,
+      "premium_pct": null,
+      "trend": "flat",
+      "confidence": "none",
+      "sources": {
+        "ebay": null,
+        "koban": null,
+        "mercadolibre": null
+      },
+      "updated_at": "2026-02-25T22:27:47.433Z"
+    }
+  },
+  "cars": [
+    {
+      "mix": "Mix 1",
+      "code": "956N",
+      "name": "Nissan Skyline GT-R (BNR34)",
+      "franchise": "Godzilla",
+      "upc": "194735337279",
+      "retail": 7.99,
+      "chase": true,
+      "kobanQuery": "Nissan Skyline GT-R BNR34 Hot Wheels"
+    },
+    {
+      "mix": "Mix 1",
+      "code": "956N",
+      "name": "1983 BMW 733i",
+      "franchise": "Stranger Things",
+      "upc": "194735337354",
+      "retail": 7.99,
+      "chase": false,
+      "kobanQuery": "BMW 733i Hot Wheels Stranger Things"
+    },
+    {
+      "mix": "Mix 1",
+      "code": "956N",
+      "name": "'64 Lincoln Continental",
+      "franchise": "The Matrix",
+      "upc": "194735337118",
+      "retail": 6.99,
+      "chase": false,
+      "kobanQuery": "Lincoln Continental Hot Wheels Matrix"
+    },
+    {
+      "mix": "Mix 1",
+      "code": "956N",
+      "name": "Animated Series Batmobile",
+      "franchise": "Batman TAS",
+      "upc": "194735337132",
+      "retail": 6.99,
+      "chase": false,
+      "kobanQuery": "Batmobile Animated Series Hot Wheels"
+    },
+    {
+      "mix": "Mix 1",
+      "code": "956N",
+      "name": "Reptar Wagon",
+      "franchise": "Rugrats",
+      "upc": "194735337170",
+      "retail": 5.99,
+      "chase": false,
+      "kobanQuery": "Reptar Wagon Hot Wheels Rugrats"
+    },
+    {
+      "mix": "Mix 3",
+      "code": "956Q",
+      "name": "Airwolf Helicopter",
+      "franchise": "Airwolf",
+      "upc": "194735262946",
+      "retail": 7.99,
+      "chase": false,
+      "kobanQuery": "Airwolf Helicopter Hot Wheels"
+    },
+    {
+      "mix": "Mix 3",
+      "code": "956Q",
+      "name": "Porsche 906 Carrera 6",
+      "franchise": "TBD",
+      "upc": "194735337316",
+      "retail": 7.99,
+      "chase": false,
+      "kobanQuery": "Porsche 906 Carrera 6 Hot Wheels"
+    },
+    {
+      "mix": "Mix 3",
+      "code": "956Q",
+      "name": "H.I.S.S. Tank",
+      "franchise": "G.I. Joe",
+      "upc": "194735337194",
+      "retail": 7.99,
+      "chase": true,
+      "kobanQuery": "HISS Tank GI Joe Hot Wheels"
+    },
+    {
+      "mix": "Mix 3",
+      "code": "956Q",
+      "name": "Custom GMC Panel Van",
+      "franchise": "TBD",
+      "upc": "194735337255",
+      "retail": 6.99,
+      "chase": false,
+      "kobanQuery": "GMC Panel Van Hot Wheels"
+    },
+    {
+      "mix": "Mix 3",
+      "code": "956Q",
+      "name": "Spider-Mobile",
+      "franchise": "Marvel Spider-Man",
+      "upc": "194735337187",
+      "retail": 6.99,
+      "chase": false,
+      "kobanQuery": "Spider-Mobile Hot Wheels Marvel"
+    }
+  ]
+}
