@@ -137,6 +137,21 @@ td:not(:first-child) { text-align:right; }
 @media(max-width:500px)  { h1{font-size:24px} td{padding:9px 7px} }
 `;
 
+// ─── CATÁLOGO FALLBACK ─────────────────────────────────────────────────────
+// Siempre visible aunque prices.json esté vacío o el fetch aún no haya corrido
+const CARS_FALLBACK = [
+  { mix:"Mix 1", code:"956N", name:"Nissan Skyline GT-R (BNR34)", franchise:"Godzilla",         upc:"194735337279", retail:7.99, chase:true  },
+  { mix:"Mix 1", code:"956N", name:"1983 BMW 733i",                franchise:"Stranger Things",  upc:"194735337354", retail:7.99, chase:false },
+  { mix:"Mix 1", code:"956N", name:"'64 Lincoln Continental",      franchise:"The Matrix",       upc:"194735337118", retail:6.99, chase:false },
+  { mix:"Mix 1", code:"956N", name:"Animated Series Batmobile",    franchise:"Batman TAS",       upc:"194735337132", retail:6.99, chase:false },
+  { mix:"Mix 1", code:"956N", name:"Reptar Wagon",                 franchise:"Rugrats",          upc:"194735337170", retail:5.99, chase:false },
+  { mix:"Mix 3", code:"956Q", name:"Airwolf Helicopter",           franchise:"Airwolf",          upc:"194735262946", retail:7.99, chase:false },
+  { mix:"Mix 3", code:"956Q", name:"Porsche 906 Carrera 6",        franchise:"TBD",              upc:"194735337316", retail:7.99, chase:false },
+  { mix:"Mix 3", code:"956Q", name:"H.I.S.S. Tank",               franchise:"G.I. Joe",         upc:"194735337194", retail:7.99, chase:true  },
+  { mix:"Mix 3", code:"956Q", name:"Custom GMC Panel Van",         franchise:"TBD",              upc:"194735337255", retail:6.99, chase:false },
+  { mix:"Mix 3", code:"956Q", name:"Spider-Mobile",                franchise:"Marvel Spider-Man",upc:"194735337187", retail:6.99, chase:false },
+];
+
 // ─── COMPONENT ─────────────────────────────────────────────────────────────
 export default function App() {
   const [data,    setData]    = useState(null);
@@ -156,7 +171,8 @@ export default function App() {
     load();
   }, []);
 
-  const cars   = data?.cars   || [];
+  // Usar cars del JSON si existen, si no usar el fallback hardcodeado
+  const cars   = (data?.cars?.length ? data.cars : CARS_FALLBACK);
   const prices = data?.prices || {};
   const tc     = data?.tc     || 3.35;
   const mixes  = [...new Set(cars.map(c => c.mix))];
