@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-25T22:27:47.433Z",
+  "generated_at": "2026-02-26T04:49:43.625Z",
   "tc": 3.35,
   "sources_active": {
     "ebay": true,
@@ -24,7 +24,7 @@
         },
         "mercadolibre": null
       },
-      "updated_at": "2026-02-25T22:27:44.649Z"
+      "updated_at": "2026-02-26T04:49:40.904Z"
     },
     "194735337354": {
       "market_price_soles": 55,
@@ -43,7 +43,7 @@
         },
         "mercadolibre": null
       },
-      "updated_at": "2026-02-25T22:27:45.015Z"
+      "updated_at": "2026-02-26T04:49:41.207Z"
     },
     "194735337118": {
       "market_price_soles": 49,
@@ -62,7 +62,7 @@
         },
         "mercadolibre": null
       },
-      "updated_at": "2026-02-25T22:27:45.317Z"
+      "updated_at": "2026-02-26T04:49:41.509Z"
     },
     "194735337132": {
       "market_price_soles": 18.9,
@@ -81,7 +81,7 @@
         },
         "mercadolibre": null
       },
-      "updated_at": "2026-02-25T22:27:45.620Z"
+      "updated_at": "2026-02-26T04:49:41.813Z"
     },
     "194735337170": {
       "market_price_soles": 55,
@@ -100,7 +100,7 @@
         },
         "mercadolibre": null
       },
-      "updated_at": "2026-02-25T22:27:45.922Z"
+      "updated_at": "2026-02-26T04:49:42.115Z"
     },
     "194735262946": {
       "market_price_soles": 44.9,
@@ -119,7 +119,7 @@
         },
         "mercadolibre": null
       },
-      "updated_at": "2026-02-25T22:27:46.225Z"
+      "updated_at": "2026-02-26T04:49:42.417Z"
     },
     "194735337316": {
       "market_price_soles": 95,
@@ -138,7 +138,7 @@
         },
         "mercadolibre": null
       },
-      "updated_at": "2026-02-25T22:27:46.526Z"
+      "updated_at": "2026-02-26T04:49:42.718Z"
     },
     "194735337194": {
       "market_price_soles": null,
@@ -154,7 +154,7 @@
         "koban": null,
         "mercadolibre": null
       },
-      "updated_at": "2026-02-25T22:27:46.828Z"
+      "updated_at": "2026-02-26T04:49:43.020Z"
     },
     "194735337255": {
       "market_price_soles": 39.9,
@@ -173,7 +173,7 @@
         },
         "mercadolibre": null
       },
-      "updated_at": "2026-02-25T22:27:47.130Z"
+      "updated_at": "2026-02-26T04:49:43.323Z"
     },
     "194735337187": {
       "market_price_soles": null,
@@ -189,7 +189,7 @@
         "koban": null,
         "mercadolibre": null
       },
-      "updated_at": "2026-02-25T22:27:47.433Z"
+      "updated_at": "2026-02-26T04:49:43.625Z"
     }
   },
   "cars": [
