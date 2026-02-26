@@ -69,27 +69,28 @@ function calcTrend(prices) {
 }
 
 // ─── FUENTE 1: eBay Finding API ──────────────────────────────────────────────
+// Usa findItemsByKeywords (listados ACTIVOS) en lugar de findCompletedItems
+// para obtener muchos más resultados con productos nuevos de 2026
 async function fetchEbay(carName) {
     if (!EBAY_APP_ID) return null;
     try {
-          // Query simplificada: sin "Pop Culture 2026" para encontrar más resultados
+          // Solo el nombre del modelo sin año ni colección — más resultados
       const q   = encodeURIComponent(`Hot Wheels ${carName}`);
           const url = `https://svcs.ebay.com/services/search/FindingService/v1`
-            + `?OPERATION-NAME=findCompletedItems`
+            + `?OPERATION-NAME=findItemsByKeywords`
             + `&SERVICE-VERSION=1.0.0`
             + `&SECURITY-APPNAME=${EBAY_APP_ID}`
             + `&RESPONSE-DATA-FORMAT=JSON`
             + `&keywords=${q}`
-            + `&itemFilter(0).name=SoldItemsOnly&itemFilter(0).value=true`
-            + `&itemFilter(1).name=Condition&itemFilter(1).value=New`
-            + `&itemFilter(2).name=MinPrice&itemFilter(2).value=3&itemFilter(2).paramName=Currency&itemFilter(2).paramValue=USD`
-            + `&itemFilter(3).name=MaxPrice&itemFilter(3).value=200&itemFilter(3).paramName=Currency&itemFilter(3).paramValue=USD`
-            + `&sortOrder=EndTimeSoonest`
+            + `&itemFilter(0).name=Condition&itemFilter(0).value=New`
+            + `&itemFilter(1).name=MinPrice&itemFilter(1).value=3&itemFilter(1).paramName=Currency&itemFilter(1).paramValue=USD`
+            + `&itemFilter(2).name=MaxPrice&itemFilter(2).value=200&itemFilter(2).paramName=Currency&itemFilter(2).paramValue=USD`
+            + `&sortOrder=PricePlusShippingLowest`
             + `&paginationInput.entriesPerPage=40`;
 
       const res   = await fetch(url);
           const json  = await res.json();
-          const items = json?.findCompletedItemsResponse?.[0]?.searchResult?.[0]?.item || [];
+          const items = json?.findItemsByKeywordsResponse?.[0]?.searchResult?.[0]?.item || [];
 
       const prices = items
             .map(i => parseFloat(i.sellingStatus?.[0]?.currentPrice?.[0]?.__value__))
@@ -127,16 +128,13 @@ async function fetchKoban(query) {
           const products = json?.resources?.results?.products || [];
           if (!products.length) return null;
 
-      // Extraer precios de los resultados (Shopify devuelve precio en centavos)
       const prices = products
             .map(p => {
-                      // price puede venir como string "S/. 89.90" o como número en centavos
-                         const raw = p.price || p.variants?.[0]?.price;
+                      const raw = p.price || p.variants?.[0]?.price;
                       if (!raw) return null;
-                      // Si es número, Shopify lo da en centavos de la moneda local
-                         const num = typeof raw === "number"
+                      const num = typeof raw === "number"
                         ? raw / 100
-                                     : parseFloat(String(raw).replace(/[^0-9.]/g, ""));
+                                  : parseFloat(String(raw).replace(/[^0-9.]/g, ""));
                       return isNaN(num) || num <= 0 ? null : num;
             })
             .filter(Boolean)
@@ -158,28 +156,27 @@ async function fetchKoban(query) {
 }
 
 // ─── FUENTE 3: MercadoLibre Perú API ─────────────────────────────────────────
+// Query más corta (3 palabras) + filtro por título para evitar ruido
 async function fetchMercadoLibre(carName) {
     try {
-          // Query simplificada: sin año para capturar más resultados
-      const q   = encodeURIComponent(`Hot Wheels ${carName}`);
-          // Usamos el endpoint público sin auth para búsqueda (lectura pública, no requiere token)
-      const url = `https://api.mercadolibre.com/sites/MPE/search?q=${q}&condition=new&limit=20`;
+          // Solo las primeras 3 palabras del nombre para más resultados
+      const shortName = carName.split(" ").slice(0, 3).join(" ");
+          const q   = encodeURIComponent(`Hot Wheels ${shortName}`);
+          const url = `https://api.mercadolibre.com/sites/MPE/search?q=${q}&condition=new&limit=50`;
           const res = await fetch(url, { headers: { "User-Agent": "RumaStoreBot/1.0" } });
           if (!res.ok) return null;
           const json  = await res.json();
           const items = json?.results || [];
 
       const prices = items
+            // Filtrar que el título contenga "hot wheels" y precio S/5–S/500
+        .filter(i => i.title?.toLowerCase().includes("hot wheels") && i.price >= 5 && i.price <= 500)
             .map(i => i.price)
-            // Filtro de outliers: S/5 – S/500 para evitar resultados irrelevantes
-        .filter(p => p >= 5 && p <= 500)
             .sort((a,b) => a - b);
 
-      console.log(`   MercadoLibre [${carName}]: ${prices.length} listados`);
+      console.log(`   MercadoLibre [${shortName}]: ${prices.length} listados`);
           if (!prices.length) return null;
 
-      // MercadoLibre filtra por sold si tenemos token; sin token usamos precios activos
-      // como aproximación del precio de mercado actual
       return {
               median:   +median(prices).toFixed(2),
               low:      prices[Math.floor(prices.length * 0.25)],
@@ -203,15 +200,13 @@ async function main() {
   for (const car of CARS) {
         console.log(`→ ${car.name} (${car.mix})`);
 
-      // Llamadas en paralelo a las 3 fuentes
       const [ebay, koban, ml] = await Promise.all([
               fetchEbay(car.name),
               fetchKoban(car.kobanQuery),
               fetchMercadoLibre(car.name),
-              sleep(300),   // pausa mínima entre autos
+              sleep(300),
             ]);
 
-      // Normalizar todo a soles
       const sources = {
               ebay: ebay ? {
                         ...ebay,
@@ -226,17 +221,12 @@ async function main() {
 
       const marketPriceSoles = weightedPrice(sources);
         const confidence       = calcConfidence(sources);
-
-      // Tendencia: tomar la de eBay si existe, sino flat
-      const trend = ebay?.trend || "flat";
-
-      // Premium sobre retail en soles
-      const retailSoles  = +(car.retail * TC).toFixed(2);
-        const premiumPct   = marketPriceSoles
+        const trend            = ebay?.trend || "flat";
+        const retailSoles      = +(car.retail * TC).toFixed(2);
+        const premiumPct       = marketPriceSoles
           ? Math.round(((marketPriceSoles - retailSoles) / retailSoles) * 100)
                 : null;
 
-      // Rango low/high: mínimo de los lows disponibles y máximo de los highs
       const allLows  = [sources.ebay?.low,  sources.koban?.low,  sources.mercadolibre?.low ].filter(Boolean);
         const allHighs = [sources.ebay?.high, sources.koban?.high, sources.mercadolibre?.high].filter(Boolean);
 
@@ -272,7 +262,6 @@ async function main() {
         console.log(`   eBay: S/${sources.ebay?.median ?? "—"} | Koban: S/${sources.koban?.median ?? "—"} | ML: S/${sources.mercadolibre?.median ?? "—"}`);
   }
 
-  // Escribir JSON final
   const output = {
         generated_at: new Date().toISOString(),
         tc:           TC,
