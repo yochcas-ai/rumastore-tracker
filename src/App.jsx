@@ -230,7 +230,7 @@ export default function App() {
             <div className="stat b">
               <div className="stat-l">Fuentes activas</div>
               <div className="stat-v">{srcActive} / 3</div>
-              <div className="stat-s">eBay · Koban · WheelCollectors</div>div></div>
+              <div className="stat-s">eBay · Koban · WheelCollectors</div>
             </div>
           </div>
 
@@ -244,7 +244,7 @@ export default function App() {
 
           <div className="tbl-wrap">
             <div className="tbl-top">
-              <span>● eBay sold · Koban.pe · WheelCollectors — precio ponderado</span>span></span>
+              <span>● eBay sold · Koban.pe · WheelCollectors — precio ponderado</span>
               <span>TC S/ {tc} × USD</span>
             </div>
             <table>
@@ -348,7 +348,7 @@ export default function App() {
           </div>
 
           <div className="footer">
-            <span>Precio ponderado: eBay 20% · Koban.pe 30% · WheelCollectors 50% · New/Sealed · 3× día</span>span></span>
+            <span>Precio ponderado: eBay 20% · Koban.pe 30% · WheelCollectors 50% · New/Sealed · 3× día</span>
             <span>Ruma Store Intelligence · rumastore.shop</span>
           </div>
 
