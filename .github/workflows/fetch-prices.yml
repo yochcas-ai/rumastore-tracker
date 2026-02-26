@@ -28,7 +28,7 @@ jobs:
       - name: Fetch eBay prices
         env:
           EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
-                    EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
         run: node scripts/fetch-prices.js
 
       - name: Commit and push prices.json
