@@ -5,6 +5,8 @@
  */
 import { useState, useEffect } from "react";
 
+const STORE_URL = "https://www.rumastore.shop";
+
 // ─── HELPERS ──────────────────────────────────────────────────────────────
 const fmt = (n, d=2) => n != null ? n.toFixed(d) : null;
 const fmtSoles = n => n != null ? `S/ ${fmt(n)}` : "—";
@@ -284,23 +286,47 @@ td:not(:first-child) { text-align:right; }
   .card-mkt { min-width:80px; padding:5px 8px; }
   h1 { font-size:24px; }
 }
+
+/* Shop button */
+.shop-btn{display:inline-flex;align-items:center;gap:4px;margin-top:5px;padding:3px 9px;border-radius:20px;font-size:10px;font-weight:600;font-family:'DM Mono',monospace;letter-spacing:.5px;text-decoration:none;background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.3);color:#a78bfa;transition:all .15s;white-space:nowrap}
+.shop-btn:hover{background:rgba(167,139,250,.2);border-color:rgba(167,139,250,.5);color:#c4b5fd}
+.shop-btn svg{flex-shrink:0}
+.card-shop-btn{display:inline-flex;align-items:center;gap:4px;padding:5px 12px;border-radius:20px;font-size:11px;font-weight:600;font-family:'DM Mono',monospace;letter-spacing:.4px;text-decoration:none;background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.35);color:#a78bfa;transition:all .15s}
+.card-shop-btn:hover{background:rgba(167,139,250,.22);border-color:rgba(167,139,250,.55);color:#c4b5fd}
+
 `;
 
 // ─── CATÁLOGO FALLBACK ───────────────────────────────────────────────────
 const CARS_FALLBACK = [
-  { mix:"Mix 1", code:"956N", name:"Nissan Skyline GT-R (BNR34)", franchise:"Godzilla",         upc:"194735337279", retail:7.99, chase:true  },
-  { mix:"Mix 1", code:"956N", name:"1983 BMW 733i",               franchise:"Stranger Things",  upc:"194735337354", retail:7.99, chase:false },
-  { mix:"Mix 1", code:"956N", name:"'64 Lincoln Continental",     franchise:"The Matrix",       upc:"194735337118", retail:6.99, chase:false },
-  { mix:"Mix 1", code:"956N", name:"Animated Series Batmobile",   franchise:"Batman TAS",       upc:"194735337132", retail:6.99, chase:false },
-  { mix:"Mix 1", code:"956N", name:"Reptar Wagon",                franchise:"Rugrats",          upc:"194735337170", retail:5.99, chase:false },
-  { mix:"Mix 3", code:"956Q", name:"Airwolf Helicopter",          franchise:"Airwolf",          upc:"194735262946", retail:7.99, chase:false },
-  { mix:"Mix 3", code:"956Q", name:"Porsche 906 Carrera 6",       franchise:"TBD",              upc:"194735337316", retail:7.99, chase:false },
-  { mix:"Mix 3", code:"956Q", name:"H.I.S.S. Tank",              franchise:"G.I. Joe",         upc:"194735337194", retail:7.99, chase:true  },
-  { mix:"Mix 3", code:"956Q", name:"Custom GMC Panel Van",        franchise:"TBD",              upc:"194735337255", retail:6.99, chase:false },
-  { mix:"Mix 3", code:"956Q", name:"Spider-Mobile",               franchise:"Marvel Spider-Man",upc:"194735337187", retail:6.99, chase:false },
+  { mix:"Mix 1", code:"956N", name:"Nissan Skyline GT-R (BNR34)", franchise:"Godzilla",         upc:"194735337279", retail:7.99, chase:true,  shopUrl:STORE_URL+"/hot-wheels-2" },
+  { mix:"Mix 1", code:"956N", name:"1983 BMW 733i",               franchise:"Stranger Things",  upc:"194735337354", retail:7.99, chase:false, shopUrl:STORE_URL+"/hot-wheels-premium-stranger-things-pop-culture" },
+  { mix:"Mix 1", code:"956N", name:"'64 Lincoln Continental",     franchise:"The Matrix",       upc:"194735337118", retail:6.99, chase:false, shopUrl:STORE_URL+"/hot-wheels-premium-matrix-pop-culture" },
+  { mix:"Mix 1", code:"956N", name:"Animated Series Batmobile",   franchise:"Batman TAS",       upc:"194735337132", retail:6.99, chase:false, shopUrl:STORE_URL+"/hot-wheels-premium-batman-the-animated-series-pop-culture" },
+  { mix:"Mix 1", code:"956N", name:"Reptar Wagon",                franchise:"Rugrats",          upc:"194735337170", retail:5.99, chase:false, shopUrl:STORE_URL+"/hot-wheels-premium-rugrats-reptar-pop-culture" },
+  { mix:"Mix 3", code:"956Q", name:"Airwolf Helicopter",          franchise:"Airwolf",          upc:"194735262946", retail:7.99, chase:false, shopUrl:STORE_URL+"/hot-wheels-airwolf-pop-culture" },
+  { mix:"Mix 3", code:"956Q", name:"Porsche 906 Carrera 6",       franchise:"TBD",              upc:"194735337316", retail:7.99, chase:false, shopUrl:STORE_URL+"/hot-wheels-2" },
+  { mix:"Mix 3", code:"956Q", name:"H.I.S.S. Tank",              franchise:"G.I. Joe",         upc:"194735337194", retail:7.99, chase:true,  shopUrl:STORE_URL+"/hot-wheels-2" },
+  { mix:"Mix 3", code:"956Q", name:"Custom GMC Panel Van",        franchise:"TBD",              upc:"194735337255", retail:6.99, chase:false, shopUrl:STORE_URL+"/hot-wheels-2" },
+  { mix:"Mix 3", code:"956Q", name:"Spider-Mobile",               franchise:"Marvel Spider-Man",upc:"194735337187", retail:6.99, chase:false, shopUrl:STORE_URL+"/hot-wheels-2" },
 ];
 
 // ─── COMPONENT ───────────────────────────────────────────────────────────
+
+// ─── SHOP HELPERS ─────────────────────────────────────────────────────────
+function resolveShopUrl(car) {
+  return car.shopUrl || (STORE_URL + "/hot-wheels-2");
+}
+
+function ShopIcon() {
+  return (
+    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <path d="M16 10a4 4 0 01-8 0"/>
+    </svg>
+  );
+}
+
 export default function App() {
   const [data,    setData]    = useState(null);
   const [loading, setLoading] = useState(true);
@@ -348,6 +374,7 @@ export default function App() {
     const pct  = p.premium_pct ?? null;
     const conf = confidenceDot(p.confidence || "none");
     const srcs = p.sources || {};
+    const url  = resolveShopUrl(car);
     return (
       <tr key={car.upc}>
         <td>
@@ -357,6 +384,9 @@ export default function App() {
           </div>
           <div className="car-meta">{car.franchise} · {car.mix} · {car.code}</div>
           <div className="car-upc">{car.upc}</div>
+          <a className="shop-btn" href={url} target="_blank" rel="noopener noreferrer">
+            <ShopIcon/> Comprar en Ruma Store
+          </a>
         </td>
         <td>
           <div className="retail-sol">{fmtSoles(p.retail_soles || car.retail*tc)}</div>
@@ -413,6 +443,7 @@ export default function App() {
     const pct  = p.premium_pct ?? null;
     const conf = confidenceDot(p.confidence || "none");
     const srcs = p.sources || {};
+    const url  = resolveShopUrl(car);
     return (
       <div key={car.upc} className="car-card">
         <div className="card-header">
@@ -465,6 +496,9 @@ export default function App() {
               </div>
             );
           })}
+          <a className="card-shop-btn" href={url} target="_blank" rel="noopener noreferrer" style={{marginLeft:"auto",alignSelf:"center"}}>
+            <ShopIcon/> Comprar
+          </a>
         </div>
       </div>
     );
