@@ -9,21 +9,21 @@ const TC = 3.35;
 const OUT = path.resolve("public/data/prices.json");
 const WEIGHTS = { wheelcollectors: 0.50, koban: 0.30, ebay: 0.20 };
 
-// ─── CATÁLOGO ──────────────────────────────────────────────────────────────────
+// ─── CATÁLOGO ────────────────────────────────────────────────────────────────────
 const CARS = [
-  { mix:"Mix 1", code:"956N", name:"Nissan Skyline GT-R (BNR34)", franchise:"Godzilla",         upc:"194735337279", retail:7.99, chase:true,  kobanQuery:"Nissan Skyline GT-R BNR34 Hot Wheels",      wcQuery:"Nissan Skyline GT-R BNR34 2026 Hot Wheels Pop Culture" },
-  { mix:"Mix 1", code:"956N", name:"1983 BMW 733i",                franchise:"Stranger Things", upc:"194735337354", retail:7.99, chase:false, kobanQuery:"BMW 733i Hot Wheels Stranger Things",       wcQuery:"BMW 733i Stranger Things 2026 Hot Wheels Pop Culture" },
-  { mix:"Mix 1", code:"956N", name:"'64 Lincoln Continental",      franchise:"The Matrix",      upc:"194735337118", retail:6.99, chase:false, kobanQuery:"Lincoln Continental Hot Wheels Matrix",     wcQuery:"Lincoln Continental Matrix 2026 Hot Wheels Pop Culture" },
-  { mix:"Mix 1", code:"956N", name:"Animated Series Batmobile",    franchise:"Batman TAS",      upc:"194735337132", retail:6.99, chase:false, kobanQuery:"Batmobile Animated Series Hot Wheels",     wcQuery:"Animated Series Batmobile Batman 2026 Hot Wheels Pop Culture" },
-  { mix:"Mix 1", code:"956N", name:"Reptar Wagon",                 franchise:"Rugrats",         upc:"194735337170", retail:5.99, chase:false, kobanQuery:"Reptar Wagon Hot Wheels Rugrats",           wcQuery:"Reptar Wagon Rugrats 2026 Hot Wheels Pop Culture" },
-  { mix:"Mix 3", code:"956Q", name:"Airwolf Helicopter",           franchise:"Airwolf",         upc:"194735262946", retail:7.99, chase:false, kobanQuery:"Airwolf Helicopter Hot Wheels",             wcQuery:"Airwolf Helicopter 2026 Hot Wheels Pop Culture" },
-  { mix:"Mix 3", code:"956Q", name:"Porsche 906 Carrera 6",        franchise:"TBD",             upc:"194735337316", retail:7.99, chase:false, kobanQuery:"Porsche 906 Carrera 6 Hot Wheels",         wcQuery:"Porsche 906 Carrera 6 2026 Hot Wheels Pop Culture" },
-  { mix:"Mix 3", code:"956Q", name:"H.I.S.S. Tank",               franchise:"G.I. Joe",        upc:"194735337194", retail:7.99, chase:true,  kobanQuery:"HISS Tank GI Joe Hot Wheels",              wcQuery:"HISS Tank GI Joe 2026 Hot Wheels Pop Culture" },
-  { mix:"Mix 3", code:"956Q", name:"Custom GMC Panel Van",         franchise:"TBD",             upc:"194735337255", retail:6.99, chase:false, kobanQuery:"GMC Panel Van Hot Wheels",                 wcQuery:"Custom GMC Panel Van 2026 Hot Wheels Pop Culture" },
-  { mix:"Mix 3", code:"956Q", name:"Spider-Mobile",                franchise:"Marvel Spider-Man",upc:"194735337187", retail:6.99, chase:false, kobanQuery:"Spider-Mobile Hot Wheels Marvel",         wcQuery:"Spider-Mobile Spider-Man 2026 Hot Wheels Pop Culture" },
+  { mix:"Mix 1", code:"956N", name:"Nissan Skyline GT-R (BNR34)", franchise:"Godzilla",        upc:"194735337279", retail:7.99, chase:true,  kobanQuery:"Nissan Skyline GT-R BNR34 Hot Wheels",      wcQuery:"Nissan Skyline GT-R BNR34 2026 Hot Wheels Pop Culture",         ebayQuery:"Hot Wheels Nissan Skyline GT-R BNR34 Pop Culture 2026" },
+  { mix:"Mix 1", code:"956N", name:"1983 BMW 733i",               franchise:"Stranger Things", upc:"194735337354", retail:7.99, chase:false, kobanQuery:"BMW 733i Hot Wheels Stranger Things",        wcQuery:"BMW 733i Stranger Things 2026 Hot Wheels Pop Culture",           ebayQuery:"Hot Wheels BMW 733i Stranger Things Pop Culture 2026" },
+  { mix:"Mix 1", code:"956N", name:"'64 Lincoln Continental",     franchise:"The Matrix",      upc:"194735337118", retail:6.99, chase:false, kobanQuery:"Lincoln Continental Hot Wheels Matrix",       wcQuery:"Lincoln Continental Matrix 2026 Hot Wheels Pop Culture",         ebayQuery:"Hot Wheels Lincoln Continental Matrix Pop Culture 2026" },
+  { mix:"Mix 1", code:"956N", name:"Animated Series Batmobile",   franchise:"Batman TAS",      upc:"194735337132", retail:6.99, chase:false, kobanQuery:"Batmobile Animated Series Hot Wheels",       wcQuery:"Animated Series Batmobile Batman 2026 Hot Wheels Pop Culture",   ebayQuery:"Hot Wheels Animated Series Batmobile Batman Pop Culture 2026" },
+  { mix:"Mix 1", code:"956N", name:"Reptar Wagon",                franchise:"Rugrats",         upc:"194735337170", retail:5.99, chase:false, kobanQuery:"Reptar Wagon Hot Wheels Rugrats",            wcQuery:"Reptar Wagon Rugrats 2026 Hot Wheels Pop Culture",               ebayQuery:"Hot Wheels Reptar Wagon Rugrats Pop Culture 2026" },
+  { mix:"Mix 3", code:"956Q", name:"Airwolf Helicopter",          franchise:"Airwolf",         upc:"194735262946", retail:7.99, chase:false, kobanQuery:"Airwolf Helicopter Hot Wheels",              wcQuery:"Airwolf Helicopter 2026 Hot Wheels Pop Culture",                 ebayQuery:"Hot Wheels Airwolf Helicopter Pop Culture 2026" },
+  { mix:"Mix 3", code:"956Q", name:"Porsche 906 Carrera 6",       franchise:"TBD",             upc:"194735337316", retail:7.99, chase:false, kobanQuery:"Porsche 906 Carrera 6 Hot Wheels",           wcQuery:"Porsche 906 Carrera 6 2026 Hot Wheels Pop Culture",              ebayQuery:"Hot Wheels Porsche 906 Carrera 6 Pop Culture 2026" },
+  { mix:"Mix 3", code:"956Q", name:"H.I.S.S. Tank",              franchise:"G.I. Joe",        upc:"194735337194", retail:7.99, chase:true,  kobanQuery:"HISS Tank GI Joe Hot Wheels",               wcQuery:"HISS Tank GI Joe 2026 Hot Wheels Pop Culture",                   ebayQuery:"Hot Wheels HISS Tank GI Joe Pop Culture 2026" },
+  { mix:"Mix 3", code:"956Q", name:"Custom GMC Panel Van",        franchise:"TBD",             upc:"194735337255", retail:6.99, chase:false, kobanQuery:"GMC Panel Van Hot Wheels",                  wcQuery:"Custom GMC Panel Van 2026 Hot Wheels Pop Culture",               ebayQuery:"Hot Wheels Custom GMC Panel Van Pop Culture 2026" },
+  { mix:"Mix 3", code:"956Q", name:"Spider-Mobile",               franchise:"Marvel Spider-Man",upc:"194735337187", retail:6.99, chase:false, kobanQuery:"Spider-Mobile Hot Wheels Marvel",           wcQuery:"Spider-Mobile Spider-Man 2026 Hot Wheels Pop Culture",           ebayQuery:"Hot Wheels Spider-Mobile Marvel Spider-Man Pop Culture 2026" },
   ];
 
-// ─── UTILS ─────────────────────────────────────────────────────────────────────
+// ─── UTILS ────────────────────────────────────────────────────────────────────────
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const median = arr => {
     if (!arr.length) return null;
@@ -60,11 +60,11 @@ function calcTrend(prices) {
     return q3 > q1*1.05 ? "up" : q3 < q1*0.95 ? "down" : "flat";
 }
 
-// ─── EBAY SOLD LISTINGS (scraping público, sin API key) ──────────────────────
-async function fetchEbay(carName) {
+// ─── EBAY SOLD LISTINGS ───────────────────────────────────────────────────────────
+// FIX: Recibe ebayQuery directamente en lugar de construirlo desde carName
+async function fetchEbay(ebayQuery) {
     try {
-          const simpleName = carName.replace(/[()'"]/g,"").replace(/\s+/g," ").trim();
-          const q = encodeURIComponent(`Hot Wheels ${simpleName} Pop Culture 2026`);
+          const q = encodeURIComponent(ebayQuery);
           const url = `https://www.ebay.com/sch/i.html?_nkw=${q}&LH_Sold=1&LH_Complete=1&_sacat=0&_ipg=60`;
           const res = await fetch(url, {
                   headers: {
@@ -73,7 +73,10 @@ async function fetchEbay(carName) {
                             "Accept-Language": "en-US,en;q=0.5",
                   }
           });
-          if (!res.ok) { console.warn(`  eBay scrape ${res.status} [${simpleName}]`); return null; }
+          if (!res.ok) {
+                  console.warn(`  eBay scrape ${res.status} [${ebayQuery}]`);
+                  return null;
+          }
           const html = await res.text();
           const priceRegex = /\$\s*(\d+\.\d{2})/g;
           const prices = [];
@@ -83,8 +86,11 @@ async function fetchEbay(carName) {
                   if (p >= 3 && p <= 150) prices.push(p);
           }
           prices.sort((a,b) => a-b);
-          if (!prices.length) { console.warn(`  eBay [${simpleName}]: 0 precios`); return null; }
-          console.log(`  eBay [${simpleName}]: ${prices.length} precios → $${median(prices)}`);
+          if (!prices.length) {
+                  console.warn(`  eBay [${ebayQuery}]: 0 precios`);
+                  return null;
+          }
+          console.log(`  eBay [${ebayQuery}]: ${prices.length} precios → $${median(prices)}`);
           return {
                   median: +median(prices).toFixed(2),
                   low:    prices[Math.floor(prices.length*0.25)] || prices[0],
@@ -94,12 +100,12 @@ async function fetchEbay(carName) {
                   currency: "USD",
           };
     } catch(e) {
-          console.warn(`  eBay error [${carName}]:`, e.message);
+          console.warn(`  eBay error [${ebayQuery}]:`, e.message);
           return null;
     }
 }
 
-// ─── KOBAN.PE ──────────────────────────────────────────────────────────────────
+// ─── KOBAN.PE ─────────────────────────────────────────────────────────────────────
 async function fetchKoban(query) {
     try {
           const q = encodeURIComponent(query);
@@ -124,7 +130,8 @@ async function fetchKoban(query) {
     }
 }
 
-// ─── WHEELCOLLECTORS (Shopify API pública, precios en USD) ────────────────────
+// ─── WHEELCOLLECTORS ─────────────────────────────────────────────────────────────
+// FIX: Se relaja el filtro de título para no exigir 'pop culture' estrictamente
 async function fetchWheelCollectors(query) {
     try {
           const q = encodeURIComponent(query);
@@ -135,38 +142,49 @@ async function fetchWheelCollectors(query) {
                             "Accept": "application/json",
                   }
           });
-          if (!res.ok) { console.warn(`  WheelCollectors HTTP ${res.status} [${query}]`); return null; }
+          if (!res.ok) {
+                  console.warn(`  WheelCollectors HTTP ${res.status} [${query}]`);
+                  return null;
+          }
           const json = await res.json();
           const products = json?.resources?.results?.products || [];
-          if (!products.length) { console.warn(`  WheelCollectors [${query}]: 0 resultados`); return null; }
+          if (!products.length) {
+                  console.warn(`  WheelCollectors [${query}]: 0 resultados`);
+                  return null;
+          }
 
-      const prices = products
-            .filter(p => {
-                      const title = p.title?.toLowerCase() || "";
-                      return title.includes("hot wheels") && title.includes("pop culture");
-            })
-            .map(p => {
-                      const raw = p.price || p.price_min;
-                      if (!raw) return null;
-                      const num = typeof raw === "number" ? raw / 100 : parseFloat(String(raw).replace(/[^0-9.]/g, ""));
-                      return isNaN(num) || num <= 0 ? null : num;
-            })
+      // FIX: Primero intentar con filtro "hot wheels" + "pop culture"
+      const extractPrice = p => {
+              const raw = p.price || p.price_min;
+              if (!raw) return null;
+              const num = typeof raw === "number" ? raw / 100 : parseFloat(String(raw).replace(/[^0-9.]/g, ""));
+              return isNaN(num) || num <= 0 ? null : num;
+      };
+
+      let filtered = products.filter(p => {
+              const title = p.title?.toLowerCase() || "";
+              return title.includes("hot wheels") && title.includes("pop culture");
+      });
+
+      // FIX: Si no hay con "pop culture", usar cualquier Hot Wheels
+      if (!filtered.length) {
+              filtered = products.filter(p => p.title?.toLowerCase().includes("hot wheels"));
+      }
+
+      // FIX: Si aún no hay, usar todos los resultados de la búsqueda
+      if (!filtered.length) {
+              filtered = products;
+      }
+
+      const allPrices = filtered
+            .map(extractPrice)
             .filter(Boolean)
             .sort((a, b) => a - b);
 
-      // Si no hay resultados con filtro Pop Culture, intentar sin filtro
-      const allPrices = prices.length ? prices : products
-            .filter(p => p.title?.toLowerCase().includes("hot wheels"))
-            .map(p => {
-                      const raw = p.price || p.price_min;
-                      if (!raw) return null;
-                      const num = typeof raw === "number" ? raw / 100 : parseFloat(String(raw).replace(/[^0-9.]/g, ""));
-                      return isNaN(num) || num <= 0 ? null : num;
-            })
-            .filter(Boolean)
-            .sort((a, b) => a - b);
-
-      if (!allPrices.length) { console.warn(`  WheelCollectors [${query}]: 0 precios válidos`); return null; }
+      if (!allPrices.length) {
+              console.warn(`  WheelCollectors [${query}]: 0 precios válidos`);
+              return null;
+      }
 
       const med = +median(allPrices).toFixed(2);
           const medSoles = +(med * TC).toFixed(2);
@@ -174,10 +192,10 @@ async function fetchWheelCollectors(query) {
           return {
                   median:     medSoles,
                   median_usd: med,
-                  low:        +(allPrices[Math.floor(allPrices.length * 0.25)] || allPrices[0]).toFixed(2) * TC,
-                  high:       +(allPrices[Math.floor(allPrices.length * 0.75)] || allPrices[allPrices.length - 1]).toFixed(2) * TC,
-                  samples:    allPrices.length,
-                  currency:   "PEN",
+                  low:  +(allPrices[Math.floor(allPrices.length * 0.25)] || allPrices[0]).toFixed(2) * TC,
+                  high: +(allPrices[Math.floor(allPrices.length * 0.75)] || allPrices[allPrices.length - 1]).toFixed(2) * TC,
+                  samples: allPrices.length,
+                  currency: "PEN",
           };
     } catch(e) {
           console.warn(`  WheelCollectors error [${query}]:`, e.message);
@@ -185,7 +203,7 @@ async function fetchWheelCollectors(query) {
     }
 }
 
-// ─── MAIN ───────────────────────────────────────────────────────────────────────
+// ─── MAIN ─────────────────────────────────────────────────────────────────────────
 async function main() {
     console.log(`\n🚗 Ruma Store Price Fetcher — ${new Date().toISOString()}`);
     console.log(`📡 eBay Sold Scraping ✓ | Koban ✓ | WheelCollectors ✓\n`);
@@ -195,8 +213,9 @@ async function main() {
   for (const car of CARS) {
         console.log(`→ ${car.name} (${car.mix})`);
 
+      // FIX: fetchEbay recibe el ebayQuery dedicado por auto
       const [ebay, koban, wc] = await Promise.all([
-              fetchEbay(car.name),
+              fetchEbay(car.ebayQuery),
               fetchKoban(car.kobanQuery),
               fetchWheelCollectors(car.wcQuery),
               sleep(500),
@@ -205,29 +224,32 @@ async function main() {
       const sources = {
               ebay: ebay ? {
                         median:     +(ebay.median * TC).toFixed(2),
-                        low:        +(ebay.low * TC).toFixed(2),
-                        high:       +(ebay.high * TC).toFixed(2),
+                        low:        +(ebay.low    * TC).toFixed(2),
+                        high:       +(ebay.high   * TC).toFixed(2),
                         median_usd: ebay.median,
                         samples:    ebay.samples,
               } : null,
-              koban: koban || null,
-              wheelcollectors: wc || null,
+              koban:          koban || null,
+              wheelcollectors: wc   || null,
       };
 
       const marketPriceSoles = weightedPrice(sources);
         const retailSoles      = +(car.retail * TC).toFixed(2);
-        const allLows  = [sources.ebay?.low,  sources.koban?.low,  sources.wheelcollectors?.low ].filter(Boolean);
+
+      const allLows  = [sources.ebay?.low,  sources.koban?.low,  sources.wheelcollectors?.low ].filter(Boolean);
         const allHighs = [sources.ebay?.high, sources.koban?.high, sources.wheelcollectors?.high].filter(Boolean);
 
       results[car.upc] = {
               market_price_soles: marketPriceSoles,
               market_price_usd:   marketPriceSoles ? +(marketPriceSoles / TC).toFixed(2) : null,
-              low_soles:          allLows.length  ? +Math.min(...allLows).toFixed(2)  : null,
-              high_soles:         allHighs.length ? +Math.max(...allHighs).toFixed(2) : null,
-              retail_soles:       retailSoles,
-              premium_pct:        marketPriceSoles ? Math.round(((marketPriceSoles - retailSoles) / retailSoles) * 100) : null,
-              trend:              ebay?.trend || "flat",
-              confidence:         calcConfidence(sources),
+              low_soles:   allLows.length  ? +Math.min(...allLows).toFixed(2)  : null,
+              high_soles:  allHighs.length ? +Math.max(...allHighs).toFixed(2) : null,
+              retail_soles: retailSoles,
+              premium_pct: marketPriceSoles
+                ? Math.round(((marketPriceSoles - retailSoles) / retailSoles) * 100)
+                        : null,
+              trend:      ebay?.trend || "flat",
+              confidence: calcConfidence(sources),
               sources: {
                         ebay: sources.ebay ? {
                                     median_soles: sources.ebay.median,
@@ -249,7 +271,7 @@ async function main() {
 
       const r = results[car.upc];
         console.log(`  ✓ S/ ${r.market_price_soles ?? "—"} | conf: ${r.confidence} | trend: ${r.trend}`);
-        console.log(`  eBay: $${ebay?.median ?? "—"} | Koban: S/${sources.koban?.median ?? "—"} | WC: $${wc?.median_usd ?? "—"}`);
+        console.log(`    eBay: $${ebay?.median ?? "—"} | Koban: S/${sources.koban?.median ?? "—"} | WC: $${wc?.median_usd ?? "—"}`);
   }
 
   const output = {
@@ -257,7 +279,7 @@ async function main() {
         tc: TC,
         sources_active: { ebay: true, koban: true, wheelcollectors: true },
         prices: results,
-        cars: CARS,
+        cars:   CARS,
   };
 
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
