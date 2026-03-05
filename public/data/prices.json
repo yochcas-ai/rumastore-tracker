@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-04T22:29:06.980Z",
+  "generated_at": "2026-03-05T02:41:35.640Z",
   "tc": 3.35,
   "sources_active": {
     "ebay": true,
@@ -32,22 +32,22 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-03-04T22:29:00.808Z"
+      "updated_at": "2026-03-05T02:41:27.282Z"
     },
     "194735337354": {
-      "market_price_soles": 50.31,
+      "market_price_soles": 50.32,
       "market_price_usd": 15.02,
-      "low_soles": 20.1,
-      "high_soles": 66.97,
+      "low_soles": 19.33,
+      "high_soles": 67,
       "retail_soles": 26.77,
       "premium_pct": 88,
       "trend": "up",
       "confidence": "high",
       "sources": {
         "ebay": {
-          "median_soles": 43.52,
-          "median_usd": 12.99,
-          "samples": 128
+          "median_soles": 43.55,
+          "median_usd": 13,
+          "samples": 126
         },
         "koban": {
           "median_soles": 55,
@@ -59,22 +59,22 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-03-04T22:29:01.505Z"
+      "updated_at": "2026-03-05T02:41:28.151Z"
     },
     "194735337118": {
-      "market_price_soles": 27.56,
-      "market_price_usd": 8.23,
+      "market_price_soles": 27.83,
+      "market_price_usd": 8.31,
       "low_soles": 14.87,
       "high_soles": 49,
       "retail_soles": 23.42,
-      "premium_pct": 18,
+      "premium_pct": 19,
       "trend": "up",
       "confidence": "high",
       "sources": {
         "ebay": {
-          "median_soles": 27.13,
-          "median_usd": 8.1,
-          "samples": 135
+          "median_soles": 28.48,
+          "median_usd": 8.5,
+          "samples": 128
         },
         "koban": {
           "median_soles": 49,
@@ -86,7 +86,7 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-03-04T22:29:02.409Z"
+      "updated_at": "2026-03-05T02:41:29.175Z"
     },
     "194735337132": {
       "market_price_soles": 15.93,
@@ -101,7 +101,7 @@
         "ebay": {
           "median_soles": 23.42,
           "median_usd": 6.99,
-          "samples": 108
+          "samples": 111
         },
         "koban": {
           "median_soles": 18.9,
@@ -113,22 +113,22 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-03-04T22:29:03.436Z"
+      "updated_at": "2026-03-05T02:41:30.151Z"
     },
     "194735337170": {
-      "market_price_soles": 26.2,
-      "market_price_usd": 7.82,
+      "market_price_soles": 26.62,
+      "market_price_usd": 7.95,
       "low_soles": 11.16,
       "high_soles": 55,
       "retail_soles": 20.07,
-      "premium_pct": 31,
+      "premium_pct": 33,
       "trend": "up",
       "confidence": "high",
       "sources": {
         "ebay": {
-          "median_soles": 20.6,
-          "median_usd": 6.15,
-          "samples": 113
+          "median_soles": 22.68,
+          "median_usd": 6.77,
+          "samples": 112
         },
         "koban": {
           "median_soles": 55,
@@ -140,19 +140,23 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-03-04T22:29:04.473Z"
+      "updated_at": "2026-03-05T02:41:31.092Z"
     },
     "194735262946": {
-      "market_price_soles": 41.11,
-      "market_price_usd": 12.27,
-      "low_soles": 38.83,
-      "high_soles": 44.9,
+      "market_price_soles": 40.92,
+      "market_price_usd": 12.21,
+      "low_soles": 22.68,
+      "high_soles": 55.27,
       "retail_soles": 26.77,
-      "premium_pct": 54,
-      "trend": "flat",
-      "confidence": "medium",
+      "premium_pct": 53,
+      "trend": "up",
+      "confidence": "high",
       "sources": {
-        "ebay": null,
+        "ebay": {
+          "median_soles": 40.2,
+          "median_usd": 12,
+          "samples": 128
+        },
         "koban": {
           "median_soles": 44.9,
           "samples": 1
@@ -163,19 +167,23 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-03-04T22:29:04.975Z"
+      "updated_at": "2026-03-05T02:41:32.005Z"
     },
     "194735337316": {
-      "market_price_soles": 54.45,
-      "market_price_usd": 16.25,
-      "low_soles": 30.12,
+      "market_price_soles": 50.26,
+      "market_price_usd": 15,
+      "low_soles": 23.42,
       "high_soles": 95,
       "retail_soles": 26.77,
-      "premium_pct": 103,
-      "trend": "flat",
-      "confidence": "medium",
+      "premium_pct": 88,
+      "trend": "up",
+      "confidence": "high",
       "sources": {
-        "ebay": null,
+        "ebay": {
+          "median_soles": 33.5,
+          "median_usd": 10,
+          "samples": 116
+        },
         "koban": {
           "median_soles": 95,
           "samples": 1
@@ -186,58 +194,70 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-03-04T22:29:05.476Z"
+      "updated_at": "2026-03-05T02:41:32.930Z"
     },
     "194735337194": {
-      "market_price_soles": null,
-      "market_price_usd": null,
-      "low_soles": null,
-      "high_soles": null,
+      "market_price_soles": 30.79,
+      "market_price_usd": 9.19,
+      "low_soles": 19.77,
+      "high_soles": 49.58,
       "retail_soles": 26.77,
-      "premium_pct": null,
-      "trend": "flat",
-      "confidence": "none",
+      "premium_pct": 15,
+      "trend": "up",
+      "confidence": "medium",
       "sources": {
-        "ebay": null,
+        "ebay": {
+          "median_soles": 30.79,
+          "median_usd": 9.19,
+          "samples": 109
+        },
         "koban": null,
         "wheelcollectors": null
       },
-      "updated_at": "2026-03-04T22:29:05.978Z"
+      "updated_at": "2026-03-05T02:41:33.783Z"
     },
     "194735337255": {
-      "market_price_soles": 39.9,
-      "market_price_usd": 11.91,
-      "low_soles": 38.9,
-      "high_soles": 39.9,
+      "market_price_soles": 35.26,
+      "market_price_usd": 10.53,
+      "low_soles": 20.1,
+      "high_soles": 46.87,
       "retail_soles": 23.42,
-      "premium_pct": 70,
-      "trend": "flat",
-      "confidence": "low",
+      "premium_pct": 51,
+      "trend": "up",
+      "confidence": "medium",
       "sources": {
-        "ebay": null,
+        "ebay": {
+          "median_soles": 28.31,
+          "median_usd": 8.45,
+          "samples": 114
+        },
         "koban": {
           "median_soles": 39.9,
           "samples": 2
         },
         "wheelcollectors": null
       },
-      "updated_at": "2026-03-04T22:29:06.479Z"
+      "updated_at": "2026-03-05T02:41:34.814Z"
     },
     "194735337187": {
-      "market_price_soles": null,
-      "market_price_usd": null,
-      "low_soles": null,
-      "high_soles": null,
+      "market_price_soles": 28.31,
+      "market_price_usd": 8.45,
+      "low_soles": 20.07,
+      "high_soles": 61.2,
       "retail_soles": 23.42,
-      "premium_pct": null,
-      "trend": "flat",
-      "confidence": "none",
+      "premium_pct": 21,
+      "trend": "up",
+      "confidence": "medium",
       "sources": {
-        "ebay": null,
+        "ebay": {
+          "median_soles": 28.31,
+          "median_usd": 8.45,
+          "samples": 107
+        },
         "koban": null,
         "wheelcollectors": null
       },
-      "updated_at": "2026-03-04T22:29:06.980Z"
+      "updated_at": "2026-03-05T02:41:35.640Z"
     }
   },
   "cars": [
@@ -250,7 +270,8 @@
       "retail": 7.99,
       "chase": true,
       "kobanQuery": "Nissan Skyline GT-R BNR34 Hot Wheels",
-      "wcQuery": "Nissan Skyline GT-R BNR34 2026 Hot Wheels Pop Culture"
+      "wcQuery": "Nissan Skyline GT-R BNR34 2026 Hot Wheels Pop Culture",
+      "ebayQuery": "Hot Wheels Nissan Skyline GT-R BNR34 Pop Culture 2026"
     },
     {
       "mix": "Mix 1",
@@ -261,7 +282,8 @@
       "retail": 7.99,
       "chase": false,
       "kobanQuery": "BMW 733i Hot Wheels Stranger Things",
-      "wcQuery": "BMW 733i Stranger Things 2026 Hot Wheels Pop Culture"
+      "wcQuery": "BMW 733i Stranger Things 2026 Hot Wheels Pop Culture",
+      "ebayQuery": "Hot Wheels BMW 733i Stranger Things Pop Culture 2026"
     },
     {
       "mix": "Mix 1",
@@ -272,7 +294,8 @@
       "retail": 6.99,
       "chase": false,
       "kobanQuery": "Lincoln Continental Hot Wheels Matrix",
-      "wcQuery": "Lincoln Continental Matrix 2026 Hot Wheels Pop Culture"
+      "wcQuery": "Lincoln Continental Matrix 2026 Hot Wheels Pop Culture",
+      "ebayQuery": "Hot Wheels Lincoln Continental Matrix Pop Culture 2026"
     },
     {
       "mix": "Mix 1",
@@ -283,7 +306,8 @@
       "retail": 6.99,
       "chase": false,
       "kobanQuery": "Batmobile Animated Series Hot Wheels",
-      "wcQuery": "Animated Series Batmobile Batman 2026 Hot Wheels Pop Culture"
+      "wcQuery": "Animated Series Batmobile Batman 2026 Hot Wheels Pop Culture",
+      "ebayQuery": "Hot Wheels Animated Series Batmobile Batman Pop Culture 2026"
     },
     {
       "mix": "Mix 1",
@@ -294,7 +318,8 @@
       "retail": 5.99,
       "chase": false,
       "kobanQuery": "Reptar Wagon Hot Wheels Rugrats",
-      "wcQuery": "Reptar Wagon Rugrats 2026 Hot Wheels Pop Culture"
+      "wcQuery": "Reptar Wagon Rugrats 2026 Hot Wheels Pop Culture",
+      "ebayQuery": "Hot Wheels Reptar Wagon Rugrats Pop Culture 2026"
     },
     {
       "mix": "Mix 3",
@@ -305,7 +330,8 @@
       "retail": 7.99,
       "chase": false,
       "kobanQuery": "Airwolf Helicopter Hot Wheels",
-      "wcQuery": "Airwolf Helicopter 2026 Hot Wheels Pop Culture"
+      "wcQuery": "Airwolf Helicopter 2026 Hot Wheels Pop Culture",
+      "ebayQuery": "Hot Wheels Airwolf Helicopter Pop Culture 2026"
     },
     {
       "mix": "Mix 3",
@@ -316,7 +342,8 @@
       "retail": 7.99,
       "chase": false,
       "kobanQuery": "Porsche 906 Carrera 6 Hot Wheels",
-      "wcQuery": "Porsche 906 Carrera 6 2026 Hot Wheels Pop Culture"
+      "wcQuery": "Porsche 906 Carrera 6 2026 Hot Wheels Pop Culture",
+      "ebayQuery": "Hot Wheels Porsche 906 Carrera 6 Pop Culture 2026"
     },
     {
       "mix": "Mix 3",
@@ -327,7 +354,8 @@
       "retail": 7.99,
       "chase": true,
       "kobanQuery": "HISS Tank GI Joe Hot Wheels",
-      "wcQuery": "HISS Tank GI Joe 2026 Hot Wheels Pop Culture"
+      "wcQuery": "HISS Tank GI Joe 2026 Hot Wheels Pop Culture",
+      "ebayQuery": "Hot Wheels HISS Tank GI Joe Pop Culture 2026"
     },
     {
       "mix": "Mix 3",
@@ -338,7 +366,8 @@
       "retail": 6.99,
       "chase": false,
       "kobanQuery": "GMC Panel Van Hot Wheels",
-      "wcQuery": "Custom GMC Panel Van 2026 Hot Wheels Pop Culture"
+      "wcQuery": "Custom GMC Panel Van 2026 Hot Wheels Pop Culture",
+      "ebayQuery": "Hot Wheels Custom GMC Panel Van Pop Culture 2026"
     },
     {
       "mix": "Mix 3",
@@ -349,7 +378,8 @@
       "retail": 6.99,
       "chase": false,
       "kobanQuery": "Spider-Mobile Hot Wheels Marvel",
-      "wcQuery": "Spider-Mobile Spider-Man 2026 Hot Wheels Pop Culture"
+      "wcQuery": "Spider-Mobile Spider-Man 2026 Hot Wheels Pop Culture",
+      "ebayQuery": "Hot Wheels Spider-Mobile Marvel Spider-Man Pop Culture 2026"
     }
   ]
 }
