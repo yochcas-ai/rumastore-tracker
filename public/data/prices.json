@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T16:55:40.553Z",
+  "generated_at": "2026-09-13T23:52:38.015Z",
   "tc": 3.35,
   "sources_active": {
     "ebay": true,
@@ -28,15 +28,15 @@
           "samples": 5
         }
       },
-      "updated_at": "2026-09-13T16:55:36.040Z"
+      "updated_at": "2026-09-13T23:52:31.584Z"
     },
     "194735337354": {
-      "market_price_soles": 71.26,
-      "market_price_usd": 21.27,
+      "market_price_soles": 69.16,
+      "market_price_usd": 20.64,
       "low_soles": 9.9,
-      "high_soles": 117.22,
+      "high_soles": 87.07,
       "retail_soles": 26.77,
-      "premium_pct": 166,
+      "premium_pct": 158,
       "trend": "flat",
       "confidence": "medium",
       "sources": {
@@ -46,20 +46,20 @@
           "samples": 5
         },
         "wheelcollectors": {
-          "median_soles": 87.07,
-          "median_usd": 25.99,
+          "median_soles": 83.72,
+          "median_usd": 24.99,
           "samples": 5
         }
       },
-      "updated_at": "2026-09-13T16:55:36.542Z"
+      "updated_at": "2026-09-13T23:52:32.087Z"
     },
     "194735337118": {
-      "market_price_soles": 14.9,
-      "market_price_usd": 4.45,
+      "market_price_soles": 20.22,
+      "market_price_usd": 6.04,
       "low_soles": 10.9,
       "high_soles": 49,
       "retail_soles": 23.42,
-      "premium_pct": -36,
+      "premium_pct": -14,
       "trend": "flat",
       "confidence": "medium",
       "sources": {
@@ -68,9 +68,13 @@
           "median_soles": 14.9,
           "samples": 5
         },
-        "wheelcollectors": null
+        "wheelcollectors": {
+          "median_soles": 23.42,
+          "median_usd": 6.99,
+          "samples": 1
+        }
       },
-      "updated_at": "2026-09-13T16:55:37.044Z"
+      "updated_at": "2026-09-13T23:52:32.912Z"
     },
     "194735337132": {
       "market_price_soles": 36.41,
@@ -93,7 +97,7 @@
           "samples": 4
         }
       },
-      "updated_at": "2026-09-13T16:55:37.544Z"
+      "updated_at": "2026-09-13T23:52:33.413Z"
     },
     "194735337170": {
       "market_price_soles": 30.13,
@@ -116,7 +120,7 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-09-13T16:55:38.046Z"
+      "updated_at": "2026-09-13T23:52:34.363Z"
     },
     "194735262946": {
       "market_price_soles": 32.04,
@@ -139,7 +143,7 @@
           "samples": 2
         }
       },
-      "updated_at": "2026-09-13T16:55:38.548Z"
+      "updated_at": "2026-09-13T23:52:34.864Z"
     },
     "194735337316": {
       "market_price_soles": 37.35,
@@ -162,7 +166,7 @@
           "samples": 4
         }
       },
-      "updated_at": "2026-09-13T16:55:39.050Z"
+      "updated_at": "2026-09-13T23:52:35.365Z"
     },
     "194735337194": {
       "market_price_soles": 65.41,
@@ -185,7 +189,7 @@
           "samples": 2
         }
       },
-      "updated_at": "2026-09-13T16:55:39.551Z"
+      "updated_at": "2026-09-13T23:52:36.289Z"
     },
     "194735337255": {
       "market_price_soles": 33.41,
@@ -208,7 +212,7 @@
           "samples": 2
         }
       },
-      "updated_at": "2026-09-13T16:55:40.051Z"
+      "updated_at": "2026-09-13T23:52:36.895Z"
     },
     "194735337187": {
       "market_price_soles": 41.19,
@@ -231,7 +235,7 @@
           "samples": 4
         }
       },
-      "updated_at": "2026-09-13T16:55:40.552Z"
+      "updated_at": "2026-09-13T23:52:38.015Z"
     }
   },
   "cars": [
