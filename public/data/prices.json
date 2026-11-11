@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T10:18:13.415Z",
+  "generated_at": "2026-11-11T20:05:47.633Z",
   "tc": 3.35,
   "sources_active": {
     "ebay": true,
@@ -8,12 +8,12 @@
   },
   "prices": {
     "194735337279": {
-      "market_price_soles": 42.69,
-      "market_price_usd": 12.74,
-      "low_soles": 14.9,
+      "market_price_soles": 40.6,
+      "market_price_usd": 12.12,
+      "low_soles": 30.12,
       "high_soles": 55,
       "retail_soles": 26.77,
-      "premium_pct": 59,
+      "premium_pct": 52,
       "trend": "flat",
       "confidence": "medium",
       "sources": {
@@ -23,12 +23,12 @@
           "samples": 5
         },
         "wheelcollectors": {
-          "median_soles": 40.17,
-          "median_usd": 11.99,
+          "median_soles": 36.82,
+          "median_usd": 10.99,
           "samples": 5
         }
       },
-      "updated_at": "2026-11-11T10:18:08.902Z"
+      "updated_at": "2026-11-11T20:05:43.119Z"
     },
     "194735337354": {
       "market_price_soles": 66.07,
@@ -51,7 +51,7 @@
           "samples": 2
         }
       },
-      "updated_at": "2026-11-11T10:18:09.403Z"
+      "updated_at": "2026-11-11T20:05:43.619Z"
     },
     "194735337118": {
       "market_price_soles": 19.39,
@@ -74,13 +74,13 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-11-11T10:18:09.904Z"
+      "updated_at": "2026-11-11T20:05:44.122Z"
     },
     "194735337132": {
       "market_price_soles": 34.01,
       "market_price_usd": 10.15,
       "low_soles": 9.9,
-      "high_soles": 49,
+      "high_soles": 127.27,
       "retail_soles": 23.42,
       "premium_pct": 45,
       "trend": "flat",
@@ -94,10 +94,10 @@
         "wheelcollectors": {
           "median_soles": 33.47,
           "median_usd": 9.99,
-          "samples": 2
+          "samples": 3
         }
       },
-      "updated_at": "2026-11-11T10:18:10.405Z"
+      "updated_at": "2026-11-11T20:05:44.624Z"
     },
     "194735337170": {
       "market_price_soles": 25.38,
@@ -120,7 +120,7 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-11-11T10:18:10.906Z"
+      "updated_at": "2026-11-11T20:05:45.126Z"
     },
     "194735262946": {
       "market_price_soles": 32.79,
@@ -143,7 +143,7 @@
           "samples": 2
         }
       },
-      "updated_at": "2026-11-11T10:18:11.408Z"
+      "updated_at": "2026-11-11T20:05:45.628Z"
     },
     "194735337316": {
       "market_price_soles": 24.41,
@@ -166,21 +166,21 @@
           "samples": 3
         }
       },
-      "updated_at": "2026-11-11T10:18:11.910Z"
+      "updated_at": "2026-11-11T20:05:46.130Z"
     },
     "194735337194": {
-      "market_price_soles": 39.07,
-      "market_price_usd": 11.66,
-      "low_soles": 13.9,
+      "market_price_soles": 50.32,
+      "market_price_usd": 15.02,
+      "low_soles": 14.9,
       "high_soles": 53.57,
       "retail_soles": 26.77,
-      "premium_pct": 46,
+      "premium_pct": 88,
       "trend": "flat",
       "confidence": "medium",
       "sources": {
         "ebay": null,
         "koban": {
-          "median_soles": 14.9,
+          "median_soles": 44.9,
           "samples": 5
         },
         "wheelcollectors": {
@@ -189,7 +189,7 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-11-11T10:18:12.412Z"
+      "updated_at": "2026-11-11T20:05:46.631Z"
     },
     "194735337255": {
       "market_price_soles": 30.04,
@@ -212,7 +212,7 @@
           "samples": 3
         }
       },
-      "updated_at": "2026-11-11T10:18:12.913Z"
+      "updated_at": "2026-11-11T20:05:47.132Z"
     },
     "194735337187": {
       "market_price_soles": 35.88,
@@ -235,7 +235,7 @@
           "samples": 2
         }
       },
-      "updated_at": "2026-11-11T10:18:13.415Z"
+      "updated_at": "2026-11-11T20:05:47.632Z"
     }
   },
   "cars": [
