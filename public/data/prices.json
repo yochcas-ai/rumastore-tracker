@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T10:37:53.025Z",
+  "generated_at": "2026-11-12T20:43:51.185Z",
   "tc": 3.35,
   "sources_active": {
     "ebay": true,
@@ -28,7 +28,7 @@
           "samples": 5
         }
       },
-      "updated_at": "2026-11-12T10:37:48.514Z"
+      "updated_at": "2026-11-12T20:43:46.675Z"
     },
     "194735337354": {
       "market_price_soles": 66.07,
@@ -51,7 +51,7 @@
           "samples": 2
         }
       },
-      "updated_at": "2026-11-12T10:37:49.016Z"
+      "updated_at": "2026-11-12T20:43:47.175Z"
     },
     "194735337118": {
       "market_price_soles": 19.39,
@@ -74,7 +74,7 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-11-12T10:37:49.518Z"
+      "updated_at": "2026-11-12T20:43:47.678Z"
     },
     "194735337132": {
       "market_price_soles": 34.01,
@@ -97,21 +97,21 @@
           "samples": 3
         }
       },
-      "updated_at": "2026-11-12T10:37:50.018Z"
+      "updated_at": "2026-11-12T20:43:48.180Z"
     },
     "194735337170": {
-      "market_price_soles": 25.38,
-      "market_price_usd": 7.58,
-      "low_soles": 14.87,
+      "market_price_soles": 16.01,
+      "market_price_usd": 4.78,
+      "low_soles": 13.9,
       "high_soles": 55,
       "retail_soles": 20.07,
-      "premium_pct": 26,
+      "premium_pct": -20,
       "trend": "flat",
       "confidence": "medium",
       "sources": {
         "ebay": null,
         "koban": {
-          "median_soles": 42.9,
+          "median_soles": 17.9,
           "samples": 5
         },
         "wheelcollectors": {
@@ -120,21 +120,21 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-11-12T10:37:50.520Z"
+      "updated_at": "2026-11-12T20:43:48.681Z"
     },
     "194735262946": {
-      "market_price_soles": 32.79,
-      "market_price_usd": 9.79,
+      "market_price_soles": 32.41,
+      "market_price_usd": 9.67,
       "low_soles": 8.9,
       "high_soles": 44.9,
       "retail_soles": 26.77,
-      "premium_pct": 22,
+      "premium_pct": 21,
       "trend": "flat",
       "confidence": "medium",
       "sources": {
         "ebay": null,
         "koban": {
-          "median_soles": 14.9,
+          "median_soles": 13.9,
           "samples": 5
         },
         "wheelcollectors": {
@@ -143,7 +143,7 @@
           "samples": 2
         }
       },
-      "updated_at": "2026-11-12T10:37:51.021Z"
+      "updated_at": "2026-11-12T20:43:49.182Z"
     },
     "194735337316": {
       "market_price_soles": 24.41,
@@ -166,7 +166,7 @@
           "samples": 3
         }
       },
-      "updated_at": "2026-11-12T10:37:51.522Z"
+      "updated_at": "2026-11-12T20:43:49.683Z"
     },
     "194735337194": {
       "market_price_soles": 50.32,
@@ -189,7 +189,7 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-11-12T10:37:52.024Z"
+      "updated_at": "2026-11-12T20:43:50.184Z"
     },
     "194735337255": {
       "market_price_soles": 30.04,
@@ -212,7 +212,7 @@
           "samples": 3
         }
       },
-      "updated_at": "2026-11-12T10:37:52.525Z"
+      "updated_at": "2026-11-12T20:43:50.685Z"
     },
     "194735337187": {
       "market_price_soles": 35.88,
@@ -235,7 +235,7 @@
           "samples": 2
         }
       },
-      "updated_at": "2026-11-12T10:37:53.025Z"
+      "updated_at": "2026-11-12T20:43:51.185Z"
     }
   },
   "cars": [
