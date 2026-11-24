@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T05:43:45.735Z",
+  "generated_at": "2026-11-24T13:15:44.801Z",
   "tc": 3.35,
   "sources_active": {
     "ebay": true,
@@ -28,7 +28,7 @@
           "samples": 5
         }
       },
-      "updated_at": "2026-11-24T05:43:41.224Z"
+      "updated_at": "2026-11-24T13:15:40.287Z"
     },
     "194735337354": {
       "market_price_soles": 66.07,
@@ -51,7 +51,7 @@
           "samples": 2
         }
       },
-      "updated_at": "2026-11-24T05:43:41.725Z"
+      "updated_at": "2026-11-24T13:15:40.789Z"
     },
     "194735337118": {
       "market_price_soles": 29.89,
@@ -74,7 +74,7 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-11-24T05:43:42.227Z"
+      "updated_at": "2026-11-24T13:15:41.290Z"
     },
     "194735337132": {
       "market_price_soles": 28.38,
@@ -97,7 +97,7 @@
           "samples": 2
         }
       },
-      "updated_at": "2026-11-24T05:43:42.727Z"
+      "updated_at": "2026-11-24T13:15:41.792Z"
     },
     "194735337170": {
       "market_price_soles": 46.9,
@@ -116,7 +116,7 @@
         },
         "wheelcollectors": null
       },
-      "updated_at": "2026-11-24T05:43:43.229Z"
+      "updated_at": "2026-11-24T13:15:42.294Z"
     },
     "194735262946": {
       "market_price_soles": 32.04,
@@ -139,7 +139,7 @@
           "samples": 2
         }
       },
-      "updated_at": "2026-11-24T05:43:43.731Z"
+      "updated_at": "2026-11-24T13:15:42.796Z"
     },
     "194735337316": {
       "market_price_soles": 36.97,
@@ -162,7 +162,7 @@
           "samples": 4
         }
       },
-      "updated_at": "2026-11-24T05:43:44.232Z"
+      "updated_at": "2026-11-24T13:15:43.298Z"
     },
     "194735337194": {
       "market_price_soles": 50.32,
@@ -185,7 +185,7 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-11-24T05:43:44.732Z"
+      "updated_at": "2026-11-24T13:15:43.799Z"
     },
     "194735337255": {
       "market_price_soles": 30.04,
@@ -208,7 +208,7 @@
           "samples": 3
         }
       },
-      "updated_at": "2026-11-24T05:43:45.233Z"
+      "updated_at": "2026-11-24T13:15:44.299Z"
     },
     "194735337187": {
       "market_price_soles": 26.67,
@@ -231,7 +231,7 @@
           "samples": 1
         }
       },
-      "updated_at": "2026-11-24T05:43:45.735Z"
+      "updated_at": "2026-11-24T13:15:44.801Z"
     }
   },
   "cars": [
